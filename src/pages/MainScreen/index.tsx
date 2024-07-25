@@ -73,7 +73,7 @@ const MainScreen: React.FC = () => {
           </h1>
           <div>
             <p className="text-[20px] font-roboto font-normal leading-[19px] mb-4">
-              Coloque aqui o seu Projeto:
+              Envie aqui o seu Projeto:
             </p>
           </div>
           <Card className="bg-gray-50">
@@ -146,7 +146,7 @@ const MainScreen: React.FC = () => {
                     <CiFaceSmile size={30} color="black" /> Parabéns!!!!
                   </AlertTitle>
                   <AlertDescription className="text-xl flex items-center">
-                    Seu Projeto foi Subido com Sucesso
+                    Seu Projeto foi postado com sucesso
                   </AlertDescription>
                 </Alert>
               </motion.div>
