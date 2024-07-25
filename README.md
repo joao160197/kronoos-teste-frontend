@@ -1,25 +1,30 @@
-## Teste de Vaga Frontend Kronoos
+# React + TypeScript + Vite
 
-Para este teste, você deve criar 4 componentes do Shadcn customizados à sua escolha. Cada componente deve ser bem documentado no Storybook, incluindo todos os comportamentos e interações disponíveis. Além disso, você deve seguir as seguintes regras:
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### Tecnologias à serem utilizadas:
-* React
-* Typescript
-* Vite
-* Tailwind CSS
-* Shadcn
-* Storybook
+Currently, two official plugins are available:
 
-### Instruções:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-1. Faça um fork deste repositório.
-2. Desenvolva a aplicação conforme as especificações acima.
-3. Documente cada componente no Storybook.
-4. Utilize Typescript com as devidas interfaces e tipagens.
-5. Utilize Tailwind CSS para estilização.
+## Expanding the ESLint configuration
 
-### Entrega:
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-Assim que concluir o teste, retorne para nós informando a quantidade de horas trabalhadas no teste com o link do seu fork para que possamos visualizá-lo.
+- Configure the top-level `parserOptions` property like this:
 
-Boa sorte!
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
+
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
